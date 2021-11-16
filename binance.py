@@ -135,10 +135,9 @@ class BinanceAnalyzer:
             if not json_data:
                 print('Warning! Not valid data')
                 continue
-            print(json_data)
+            
             for transaction_item in json_data:
-                print(transaction_item)
-
+            
                 transaction_object = BinanceObject(
                     aggregate_trade_id=transaction_item.get('a'),
                     price=transaction_item.get('p'),
